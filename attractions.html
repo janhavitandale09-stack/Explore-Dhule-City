@@ -34,6 +34,7 @@ header{
 /* Cards Container */
 .container{
     display:flex;
+    flex-wrap:wrap; /* ✅ makes it responsive */
     justify-content:center;
     gap:25px;
     padding:20px;
@@ -43,6 +44,7 @@ header{
 .card{
     background:white;
     width:210px;
+    max-width:90%; /* ✅ prevents overflow */
     border-radius:12px;
     box-shadow:0 4px 10px rgba(0,0,0,0.2);
     overflow:hidden;
@@ -68,6 +70,27 @@ header{
     padding:0 12px 15px;
     font-size:13px;
     line-height:1.4;
+}
+
+/* 📱 Mobile */
+@media (max-width:600px){
+    .card{
+        width:90%;
+    }
+}
+
+/* 📱 Tablet */
+@media (min-width:601px) and (max-width:1024px){
+    .card{
+        width:45%;
+    }
+}
+
+/* 💻 Desktop */
+@media (min-width:1025px){
+    .card{
+        width:210px;
+    }
 }
 
 </style>
