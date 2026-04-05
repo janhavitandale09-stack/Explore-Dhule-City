@@ -23,35 +23,31 @@ header{
 .shopping-section{
     padding:40px 20px;
     text-align:center;
-
 }
 
 .shopping-section h2{
     color:#ff6600;
-    text-align:center;
     margin-bottom:30px;
 }
 
-/* Cards in one line */
+/* ✅ GRID STYLE (like first page) */
 .card-container{
     display:flex;
-    flex-wrap:nowrap;
-    gap:20px;
-    overflow-x:auto;
-    padding:10px;
+    flex-wrap:wrap;              /* IMPORTANT */
     justify-content:center;
-
+    gap:20px;
+    padding:10px;
 }
 
 /* Card design */
 .shopping-box{
-            background:white;
-            width:250px;
-            padding:15px;
-            border-radius:10px;
-            box-shadow:0 4px 8px rgba(0,0,0,0.2);
-            transition:0.3s;
-
+    background:white;
+    width:250px;
+    max-width:90%;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.2);
+    transition:0.3s;
 }
 
 .shopping-box img{
@@ -70,9 +66,32 @@ header{
     font-size:14px;
     margin-bottom:10px;
 }
-.shopping:hover{
+
+/* Hover */
+.shopping-box:hover{
     transform:translateY(-8px);
- }
+}
+
+/* 📱 Mobile */
+@media (max-width:600px){
+    .shopping-box{
+        width:90%;
+    }
+}
+
+/* 📱 Tablet */
+@media (min-width:601px) and (max-width:1024px){
+    .shopping-box{
+        width:45%;
+    }
+}
+
+/* 💻 Desktop */
+@media (min-width:1025px){
+    .shopping-box{
+        width:22%;
+    }
+}
 
 </style>
 </head>
@@ -89,7 +108,6 @@ header{
 
 <div class="card-container">
 
-<!-- Zudio -->
 <div class="shopping-box">
 <img src="https://media.licdn.com/dms/image/v2/D5622AQHeSGwUfswydg/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1732445724200?e=2147483647&v=beta&t=mU2WRzINFnFPztbnFiZ7zCW_Uig4JD09ZA_uoVLSnhc">
 <h3>Zudio</h3>
@@ -99,7 +117,6 @@ Young people especially enjoy shopping here for modern outfits, footwear and sty
 </p>
 </div>
 
-<!-- Reliance Trends -->
 <div class="shopping-box">
 <img src="https://content3.jdmagicbox.com/comp/dhule/n6/9999p2562.2562.230910120640.d7n6/catalogue/trends-dhule-readymade-garment-retailers-pzrvj5uese.jpg">
 <h3>Reliance Trends</h3>
@@ -109,7 +126,6 @@ It is a favourite shopping destination for families looking for stylish and qual
 </p>
 </div>
 
-<!-- Dmart -->
 <div class="shopping-box">
 <img src="https://bhvnas.wordpress.com/wp-content/uploads/2013/07/dmart_20110806.jpg?w=584">
 <h3>Dmart</h3>
@@ -119,29 +135,19 @@ People visit this store to buy groceries, household items, kitchen products and 
 </p>
 </div>
 
-<!-- Local Markets -->
 <div class="shopping-box">
 <img src="https://dustdale.com/wp-content/uploads/2024/05/sector-49-noida-uttar-pradesh-barola-market.jpg">
 <h3>Local Markets</h3>
 <p>
 Dhule has many busy local markets such as Panch Kandil, Deopur Market, Mahatma Phule Market and the Main Bazaar area where people buy clothes, vegetables, fruits and daily goods.
-</p></div>
+</p>
+</div>
 
-<!-- Weekly Bazaar -->
 <div class="shopping-box">
 <img src="https://img.freepik.com/premium-photo/traditional-indian-street-market-jaisalmer-rajasthan-india_109442-321.jpg">
 <h3>Weekly Bazaar</h3>
 <p>
 Weekly bazaars are organised in different parts of the city where farmers and traders sell fresh vegetables, fruits and household products at lower prices.
-</p>
-</div>
-
-<!-- Famous Items -->
-<div class="shopping-box">
-<img src="https://5.imimg.com/data5/SELLER/Default/2022/7/GA/VX/VA/24259282/cotton-fabric-250x250-1--250x250.jpg">
-<h3>Famous Items</h3>
-<p>
-Visitors to Dhule often buy cotton products, traditional clothing, local snacks, sweets and handicraft items that represent the culture of the Khandesh region.
 </p>
 </div>
 
