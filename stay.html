@@ -35,13 +35,16 @@ header{
 /* FLEX CONTAINER */
 .stay-container{
     display:flex;
-    justify-content:space-between;
+    flex-wrap:wrap;              /* ✅ IMPORTANT */
+    justify-content:center;
+    gap:20px;                   /* ✅ spacing */
 }
 
 /* CARDS */
 .stay-box{
     background:white;
     width:22%;
+    max-width:90%;              /* ✅ prevents overflow */
     padding:15px;
     border-radius:10px;
     box-shadow:0 4px 8px rgba(0,0,0,0.2);
@@ -57,6 +60,27 @@ img{
     height:150px;
     object-fit:cover;
     border-radius:8px;
+}
+
+/* 📱 Mobile */
+@media (max-width:600px){
+    .stay-box{
+        width:90%;
+    }
+}
+
+/* 📱 Tablet */
+@media (min-width:601px) and (max-width:1024px){
+    .stay-box{
+        width:45%;
+    }
+}
+
+/* 💻 Desktop */
+@media (min-width:1025px){
+    .stay-box{
+        width:22%;
+    }
 }
 
 </style>
